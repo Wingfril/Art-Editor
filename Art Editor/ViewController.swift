@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
-    var curImage:UIImage!
+    var selectedImage:UIImage!
     var flag = false
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -21,27 +21,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
-        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+        guard let selectImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        //print(curImage)
-        curImage = selectedImage
+
+        selectedImage = selectImage
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
         flag = true
         print("Finished picking image")
-        print(curImage)
+        print(selectedImage)
         MovingToLineartView()
         
     }
     
-    // ERROR: Right now, as soon as "edit line art" is pressed,
-    // Prepareforsegue is called; however, curimage is
-    // NULL right now, since no image is selected.
-    // We need to find a way to have call imagePicker controller
-    // before calling prepareforsegue.
+
+    // Picks an image, and segues to next view
     @IBAction func toLineart(_ sender: UIButton)
     {
+        // Set an clicked image
+        //sender.setImage(UIImage(named: "LineArtButtonPressed"), for: UIControlState.normal)
+        
         print("Inside tolineart")
         // Hide the keyboard.
         //nameTextField.resignFirstResponder()
@@ -72,6 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -86,7 +87,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if(segue.identifier == "Lineart")
         {
             let LineartViewController = segue.destination as! LineartViewController
-            LineartViewController.curImage = curImage
+            LineartViewController.curImage = selectedImage
         }
         
         

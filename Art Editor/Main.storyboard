@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lR0-a7-h13">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -39,10 +39,11 @@
                                     <action selector="toLandscapeGeneration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCP-V2-2I5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-UD-jFu">
-                                <rect key="frame" x="433" y="193" width="158" height="131"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Edit line art"/>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-UD-jFu">
+                                <rect key="frame" x="466.5" y="167" width="91" height="34"/>
+                                <state key="normal" title="Edit line art">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="toLineart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHf-4p-Tj0"/>
                                 </connections>
@@ -57,6 +58,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5mX-Ls-rwL"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
                     <connections>
                         <segue destination="aB0-Qa-XU6" kind="show" identifier="Lineart" id="Bb0-Eu-6WS"/>
                         <segue destination="EVZ-Ry-VYk" kind="show" identifier="LandscapeGeneration" id="er2-iC-k07"/>
@@ -64,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882.8125" y="122.46093749999999"/>
+            <point key="canvasLocation" x="882.421875" y="121.875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ygA-0X-rGN">
@@ -91,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gz-Z7-MFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682.8125" y="473.43749999999994"/>
+            <point key="canvasLocation" x="2164" y="822"/>
         </scene>
         <!--Lineart View Controller-->
         <scene sceneID="oVz-c1-d6J">
@@ -147,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2S-WJ-bec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1682.8125" y="-262.5"/>
+            <point key="canvasLocation" x="2164" y="-728"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="12J-ZB-iY4">

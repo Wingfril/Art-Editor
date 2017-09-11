@@ -25,6 +25,15 @@ class LineartViewController: UIViewController {
 
     var curImage:UIImage!
     
+    var curImageCGI:CGImage!
+    var imageWidth:Int!
+    var imageHeight:Int!
+    
+    let bytesPerPixel = 4
+    let bitsPerComponent = 8
+    var bytesPerRow:Int!
+
+    
     //@IBOutlet var ZoomGesture: UIPinchGestureRecognizer!
     
     override func viewDidLoad() {
