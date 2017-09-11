@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lR0-a7-h13">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Art_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ZQ-5d-Njb">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Home Page" id="crX-d8-mTz">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="TfW-G3-Yfm"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymv-UC-edr">
+                                <rect key="frame" x="413" y="465" width="199" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Generate landscapes"/>
+                                <connections>
+                                    <action selector="toLandscapeGeneration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCP-V2-2I5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-UD-jFu">
+                                <rect key="frame" x="433" y="193" width="158" height="131"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Edit line art"/>
+                                <connections>
+                                    <action selector="toLineart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHf-4p-Tj0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lmX-UD-jFu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="auQ-aL-nWU"/>
+                            <constraint firstItem="lmX-UD-jFu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jKT-SY-qcW"/>
+                            <constraint firstItem="ymv-UC-edr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jg8-QC-cYl"/>
+                            <constraint firstItem="ymv-UC-edr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="qou-CT-qbA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5mX-Ls-rwL"/>
+                    <connections>
+                        <segue destination="aB0-Qa-XU6" kind="show" identifier="Lineart" id="Bb0-Eu-6WS"/>
+                        <segue destination="EVZ-Ry-VYk" kind="show" identifier="LandscapeGeneration" id="er2-iC-k07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.8125" y="122.46093749999999"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ygA-0X-rGN">
+            <objects>
+                <viewController id="EVZ-Ry-VYk" customClass="ViewController" customModule="Art_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qi9-0H-AT0"/>
+                        <viewControllerLayoutGuide type="bottom" id="T5J-F3-dj8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lXE-HN-yLT">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THIS IS LAND SCAPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-Xc-y3g">
+                                <rect key="frame" x="94" y="134" width="235" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gz-Z7-MFc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.8125" y="473.43749999999994"/>
+        </scene>
+        <!--Lineart View Controller-->
+        <scene sceneID="oVz-c1-d6J">
+            <objects>
+                <viewController id="aB0-Qa-XU6" customClass="LineartViewController" customModule="Art_Editor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WH3-4b-QF0"/>
+                        <viewControllerLayoutGuide type="bottom" id="dP2-OI-ntq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ag7-7O-hL6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.10000000000000001" maximumZoomScale="8" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-fa-Ndn">
+                                <rect key="frame" x="0.0" y="129" width="1024" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ms0-ZL-yYs">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="700"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="700" id="uM1-WX-0Xx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ms0-ZL-yYs" firstAttribute="centerX" secondItem="FAX-fa-Ndn" secondAttribute="centerX" id="BNf-YN-6vm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ms0-ZL-yYs" secondAttribute="trailing" constant="500" id="Unj-n1-ZRh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ms0-ZL-yYs" secondAttribute="bottom" constant="312" id="ZOO-ui-Z8E"/>
+                                    <constraint firstItem="Ms0-ZL-yYs" firstAttribute="top" secondItem="FAX-fa-Ndn" secondAttribute="top" id="q1H-b4-aVr"/>
+                                    <constraint firstItem="Ms0-ZL-yYs" firstAttribute="leading" secondItem="FAX-fa-Ndn" secondAttribute="leading" id="ynY-1p-RsJ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="aB0-Qa-XU6" id="boc-HU-5Ww"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="FAX-fa-Ndn" secondAttribute="bottom" constant="-8" id="C7I-RA-HEL"/>
+                            <constraint firstAttribute="trailing" secondItem="FAX-fa-Ndn" secondAttribute="trailing" id="bdS-1o-GUh"/>
+                            <constraint firstItem="FAX-fa-Ndn" firstAttribute="top" secondItem="WH3-4b-QF0" secondAttribute="bottom" constant="65" id="iHH-hV-Kg5"/>
+                            <constraint firstItem="FAX-fa-Ndn" firstAttribute="leading" secondItem="Ag7-7O-hL6" secondAttribute="leading" id="rg9-Kv-uMy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ms0-ZL-yYs" id="xpc-x0-jCG"/>
+                        <outlet property="imageViewBottomConstraint" destination="ZOO-ui-Z8E" id="oPR-DE-24y"/>
+                        <outlet property="imageViewLeadingConstraint" destination="ynY-1p-RsJ" id="1aG-Q4-uaf"/>
+                        <outlet property="imageViewTopConstraint" destination="q1H-b4-aVr" id="SNm-zC-Avb"/>
+                        <outlet property="imageViewTrailingConstraint" destination="Unj-n1-ZRh" id="Jdr-ad-16X"/>
+                        <outlet property="scrollView" destination="FAX-fa-Ndn" id="GPs-DO-2xk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2S-WJ-bec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682.8125" y="-262.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="12J-ZB-iY4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lR0-a7-h13" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="73t-au-Rjz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oNf-IZ-yC0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juJ-EJ-br8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.1875" y="122.46093749999999"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

@@ -1,0 +1,28 @@
+Notes
+
+Need to find a way for user to zoom and rotate the canvas.
+
+
+
+6/24/17
+
+We can now pass UI images between segues; curimage is the current user inputed image.
+
+No longer crashing when going back and selecting a new image
+
+Added print statements in the first view to see where we are at a given time.
+
+Need to figure out how to naturally scale the picture, as opposed to forcibly stretching it to fit the UIImageView.
+
+
+6/25/17
+
+Zooming is now possible.
+
+Image fits to imageview with the largest length touching edge of imageview.
+
+ERROR: The image zooms really tiny and disappears when both fingers are outside of the image (but still inside imageview and scroll view) when zooming.
+
+
+
+
